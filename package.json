@@ -1,0 +1,50 @@
+{
+  "name": "robottechnicalchallenge",
+  "version": "1.0.0",
+  "description": "Technical Coding challenge",
+  "main": "robot.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && babel ./src --out-dir ./build",
+    "start": "nodemon --exec babel-node ./src/robot.js",
+    "dev": "nodemon --exec npx babel-node src/index.js",
+    "lint": "eslint . --fix",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/message2prateek/robot-coding-challenge.git"
+  },
+  "keywords": [
+    "robot",
+    "coding",
+    "challege",
+    "nodejs"
+  ],
+  "author": "Prateek Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/message2prateek/robot-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/message2prateek/robot-coding-challenge#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.3.7",
+    "core-js": "^3.27.2",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
+  }
+}
